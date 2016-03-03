@@ -1,0 +1,667 @@
+@font-face {
+  font-family: 'myriad pro';
+
+  src: url('../fonts/MyriadPro-Black.otf');
+
+	src: url('../fonts/MyriadPro-Black.woff') format('woff'), url('../fonts/MyriadPro-Black.ttf') format('truetype'), url('../fonts/MyriadPro-Black.svg') format('svg');
+}
+@font-face {
+  font-family: 'myriadProRegular';
+
+  src: url('../fonts/MyriadPro-Regular.otf');
+
+	src: url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg') format('svg');
+}
+@font-face {
+  font-family: 'opensans';
+
+  src: url('../fonts/OpenSans-Regular_0.otf');
+
+	src: url('../fonts/OpenSans-Regular_0.woff') format('woff'), url('../fonts/OpenSans-Regular_0.ttf') format('truetype'), url('../fonts/OpenSans-Regular_0.svg') format('svg');
+}
+@font-face {
+  font-family: 'myriadcondensedweb';
+
+  src: url('../fonts/MyriadPro-Cond.otf');
+
+	src: url('../fonts/MyriadPro-Cond.woff') format('woff'), url('../fonts/MyriadPro-Cond.ttf') format('truetype'), url('../fonts/MyriadPro-Cond.svg') format('svg');
+}
+html,body,.custdocument{
+	height: 100%;
+}
+#wrap{
+	display: inline-block;
+width: 100%;
+height:auto !important;
+}
+
+.thm1-pwrd small{
+	font-family:opensans;
+	bottom: 0;
+left: 0;
+position: absolute;
+right: 0;
+padding: 30px 0;
+}
+
+.thm1-pwrd{
+text-align: center;
+display: inline-block;
+width: 100%;
+}
+.error-styl-defthm {
+  color: red;
+  display: block;
+  margin-left: 31%;
+  margin-top: 3px;
+  font-family: opensans;
+}
+.homepg-error {
+  border: 1px solid;
+  font-family: myriad pro;
+  font-size: 29px;
+  font-weight: lighter;
+  margin: 100px 12%;
+  padding: 10px;
+  text-align: center;
+  width: 70%;
+}
+.link:focus {
+    outline: 0;
+}
+.defthm-mainhd {
+  font-family: myriadproregular;
+  font-weight: bold;
+  text-align: center;
+}
+.listing-block.recent-vehicles {
+  border: 1px solid #333333;
+  margin: 5% 10%;
+  width: 80%;
+  float: left;
+}
+.app-vw-pg-defthm {
+  font-family: myriad pro;
+  margin: 2%;
+  width: 96%;
+  font-weight: lighter;
+  font-size: 30px;
+}
+
+.recaptch-custom-defthm{
+	margin:0 31%;
+}
+.jobtitle {
+  border-bottom: 1px solid #666;
+  float: left;
+  font-family: myriadProRegular;
+  font-weight: bold;
+  margin-left: 2%;
+  padding-bottom: 36px;
+  width: 58%;
+}
+
+.custom-labl-defthm {
+  float: left;
+  font-family: myriadcondensedweb;
+  font-size: 26px;
+  width: 30%;
+  color: #605E5C;
+  line-height: 35px;
+}
+.choose-file-defthm {
+  font-family: opensans;
+   margin: 0 30%;
+  padding-bottom: 15px;
+  
+}
+.getcap-err {
+  cursor: pointer;
+  font-family: opensans;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+  letter-spacing: 0px;
+}
+
+.col-md-5.custom-inpt-defthm input {
+  background: #f5f5f5 none repeat scroll 0 0;
+  height: 50px;
+  width: 40%;
+  box-shadow: 0 1px 2px rgba(245, 245, 245, 1);
+  border: 0;
+  padding-left: 15px;
+   font-family: myriadcondensedweb;
+    font-size: 20px;
+}
+.choose-file-defthm label{
+background: #0099ff none repeat scroll 0 0;
+border-radius: 0;
+color: #fff;
+padding: 1% 2%;
+font-size: 13px;
+
+}
+.custom-submit-defthm input {
+  background: #0099ff none repeat scroll 0 0;
+  border: 0 none;
+  color: #fff;
+  font-family: myriadcondensedweb;
+  font-size: 26px;
+  	border-radius:5px;
+  padding: 6px 20px;
+  cursor: pointer;
+}
+.custom-submit-defthm {
+  margin: 1% 31% 2%;
+}
+.recap-reqerr{
+  color: red;
+  display: block;
+  font-family: opensans;
+}
+
+.defthm-labl-appvw{
+	float:left;
+	margin-right:2px;
+	font-family:opensans;
+}
+.defthm-lablcol-appvw{
+	float:right;
+	margin-right:10px;
+	font-family:opensans;
+}
+.defthm-dyn-appvw{
+    float: left;
+    width: 60%;
+    font-family: opensans;
+    margin-bottom: 20px;
+    position:relative;
+    bottom:12px;
+}
+.app-vw-div-defthm {
+  display: inline-block;
+  float: left;
+  line-height: 30px;
+  width: 27%;
+}
+
+
+.thank-u-content{
+	text-align:center;
+	margin-top:30px;
+	margin-bottom: 30px;
+}
+.follow-txt a {
+  color: #0099ff;
+}
+.custom-row-defthm {
+	margin: 40px 3% 0;
+  width: 94%;
+}
+.thanks-text {
+  color: #333;
+  font-family: myriad pro;
+  font-size: 30px;
+  padding-bottom: 20px;
+  font-weight: lighter;
+}
+.apply-pg-hd-txt{
+	padding-bottom: 15px;
+}
+
+.thanks-text-hr{
+	margin-left: auto;
+margin-right: auto;
+width: 80%;
+}
+.clkher-text {
+  font-family: myriadcondensedweb;
+  font-size: 19px;
+  font-weight: lighter;
+}
+.ty-form {
+  border: 1px solid #333333;
+  width: 80%;
+  margin: 50px  10%;
+}
+.follow-txt {
+  color: #333;
+  font-family: opensans;
+  font-size: 24px;
+  font-weight: lighter;
+  margin-top: 10px;
+}
+
+.job-vw-def-thm-row {
+  margin: 40px 0;
+}
+.job-vw-def-thm-div1 .label-text {
+  float: left;
+  font-family: myriadcondensedweb;
+  font-size: 26px;
+  font-weight: lighter;
+  width: 20%;
+  color:#605E5C;
+}
+.job-vw-def-thm-div1 .label-text-colen{
+	float:left;
+	width:5%
+	
+}
+.job-vw-def-thm-row .col-md-9{
+	color:#918B89;
+	font-family:opensans,sans-serif
+}
+.job-desc-rgt-sd{
+	margin-left:25%;
+}
+.job-desc-rgt-sd ul{
+	padding-left:0;
+}
+
+.job-apply-btn div {
+  background: #0099ff none repeat scroll 0 0;
+  border-radius: 10px;
+  /* margin: 2% 27%; */
+  padding: 6px;
+  width: 10%;
+    cursor:pointer;
+    margin: auto;
+}
+.job-apply-btn a {
+  color: #fff;
+  font-family: myriadcondensedweb;
+  font-size: 30px;
+  font-weight: lighter;
+
+}
+.clkher-text a:focus{
+	outline:0;
+	border:0;
+}
+.bottom-bar{
+height: 50px;
+width: 100%;
+display: inline-block;
+}
+
+
+/* start- job apply */
+.choose-file-defthm label:hover {
+    cursor: pointer;
+    background-color:#0099ff;
+     color:#fff; 
+}
+.custom-submit-defthm :focus,.custom-submit-defthm :active,
+.custom-submit-defthm :hover{
+	outline-width:0 !important;
+	border:0 !important;
+}
+.job-appl-defthm-hd{
+font-family: myriad pro;
+font-weight: lighter;
+width:95%;
+	margin:auto;
+	border-bottom:1px solid #666;
+	padding:20px 0;
+	color: #333;
+font-size: 26px;
+}
+/*end job apply  */
+@media( max-width:980px ){
+	
+	.job-vw-def-thm-div1 .label-text {
+  width: 100%;
+  float:none;
+}
+.job-vw-def-thm-div1 .label-text-colen{
+ float:none;
+}
+.job-desc-rgt-sd {
+ margin:0; 
+}
+.job-apply-btn div {
+  /* margin: 2% ; */
+  width: 30%;
+}
+.job-desc-rgt-sd {
+  margin-left: 10%;
+}
+
+}
+
+
+@media( max-width:768px){
+	.col-md-5.custom-inpt-defthm input {
+  padding-left: 15px;
+  width:100%;
+}
+.col-md-5.custom-inpt-defthm textarea {
+  width: 100% !important;
+}
+.error-styl-defthm {
+  margin-left: 13%;
+}
+.col-md-5.custom-inpt-defthm {
+  display: inline-block;
+  margin: 0 10%;
+  width: 80%;
+}
+
+.custom-labl-defthm {
+  width: 80%;
+  margin: 0 10%;
+}
+.thanks-text{
+	font-size: 24px;
+}
+.follow-txt {
+  font-size: 18px;
+}
+.defthm-lablcol-appvw {
+  float: none;
+}
+.defthm-labl-appvw {
+  float: none;
+}
+.custom-submit-defthm {
+  margin: 2% 12.5%;
+}
+.recaptch-custom-defthm {
+  margin: 0 12.5%;
+}
+.choose-file-defthm {
+  margin: 3% 10%;
+}
+.defthm-dyn-appvw {
+  width: 100%;
+  line-height:10px; 
+}
+.app-vw-div-defthm {
+ line-height:15px;
+ width: 100%;; 
+}
+.listing-block.recent-vehicles {
+  margin: 5%;
+  width: 90%;
+}
+
+}
+
+.dialog-loading-wrapper {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    position: fixed;
+    top: 50%;
+    width: 100px;
+    z-index: 9999999;
+    display:none;
+}
+
+
+
+  input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner
+    {   
+        border : 0px;
+    } 
+    
+       
+   /* JPRELOADER */
+body.enable-preloader > .custdocument {
+	opacity: 0;
+	-webkit-transition: all ease 0.25s;
+	transition: all ease 0.25s;
+}
+body.enable-preloader.done-preloader > .custdocument {
+	opacity: 1;
+}
+body.enable-preloader.preloader-dark {
+	background-color: #222;
+}
+#jpreOverlay {
+	background-color: #fff;
+}
+body.enable-preloader.preloader-dark #jpreOverlay {
+	background-color: #222;
+}
+#jpreButton, #jprePercentage {
+	display: none !important;
+}
+#jpreLoader {
+	width: 200px !important;
+	position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	margin: -4px 0 0 -100px;
+	height: 8px;
+	background-color: #eee;
+}
+body.enable-preloader.preloader-dark #jpreLoader {
+	background-color: #444;
+}
+#jpreBar {
+	position: absolute !important;
+	top: 0;
+	overflow: hidden;
+	text-align: center;
+	background-color: #0099ff ! important;
+}
+
+/* JPRELOADER */
+    
+.apply-with-indeed {
+	
+	margin-top: 2%;
+}
+
+.defThmSubHeading{
+float: left;
+font-family: myriadProRegular;
+font-size: 26px;
+font-weight: bold;
+margin-left:2%
+}
+.theme-posted {
+  color: #605e5c;
+  float: left;
+  font-family: myriadcondensedweb;
+  font-weight: lighter;
+  margin-right: 2%;
+  text-align: right;
+  float: right;
+}
+.headerSubDiv {
+  display: inline-block;
+  height: 60px;
+  margin: 0 5%;
+  padding: 10px 0;
+  width: 90%;
+}
+.header {
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  width: 100%;
+}
+.custom-Defthm-logo {
+  float: left;
+  height: 80%;
+  line-height: 6;
+  width: 60%;
+  text-decoration: none;
+  color: #000;
+}
+.custom-Defthm-logo:focus{
+	outline:none ;
+} 
+.custom-Defthm-logo img{
+	max-height: 100%;
+	max-width: 100%;
+}
+.slides{
+	display: inline-block;
+width: 50%;
+}
+.featuredListDiv {
+  background: #fff none repeat scroll 0 0;
+  float: left;
+  width: 50%;
+}
+.home-btn{
+	float: right;
+font-size: 40px;
+line-height: 1.5;
+color: #0099ff;
+}
+.DefThmJobListDiv {
+  color: #918b89;
+  float: left;
+  font-family: opensans;
+  font-size: 17px;
+  height: 120px;
+  margin: 0 10%;
+  width: 30%;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.DefThmJobList{
+	margin: 0 15%;
+width: 70%;
+}
+.vw-morebtn {
+  background: #0099ff none repeat scroll 0 0;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+.listing-header-home {
+  font-family: myriadProRegular;
+  font-size: 25px;
+  letter-spacing: 0;
+  text-align: center;
+}
+.title.custom-h2 {
+  margin-bottom: 0;
+}
+.custom-h2 a {
+  color: #605e5c !important;
+  font-family: myriadcondensedweb;
+  font-weight: normal;
+  font-size: 29px;
+}
+.vw-morebtn {
+  background: #0099ff none repeat scroll 0 0;
+  border-radius: 5px;
+  color: #fff;
+  font-family: myriadcondensedweb;
+  font-size: 25px;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+.vw-morbtn-maindiv{
+	display: inline-block;
+margin:50px 0;
+text-align: center;
+width: 100%;
+}
+.footer-copyright {
+  border-top: 1px solid #000;
+  color: #666;
+  font-family: opensans;
+  font-size: 13px;
+  margin: 0 5%;
+  padding: 15px 0 ;
+  text-align: center;
+  width: 90%;
+}
+.noJobsErr h2{
+	color: #605e5c !important;
+font-family: myriadcondensedweb;
+}
+.jobVwHeading{
+	border-bottom: 1px solid #666;
+display: inline-block;
+width: 100%;
+}
+.customJobVwSection{
+margin: 15px 10% 5%;
+}
+.customJobVwSection{
+margin: 15px 10% 50px !important;
+}
+.custom-Defthm-logo span {
+  font-family: myriadcondensedweb;
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 0;
+  position: relative;
+  top: -12px;
+}
+@media ( max-width : 968px ) {
+	.jobtitle{
+	width: 96%;
+	padding-bottom: 20px;
+	border: none;
+	}
+.customJobVwSection {
+  width: 80% !important;
+}
+.DefThmJobList {
+  margin: 0 10%;
+  width: 80%;
+}
+.defThmSubHeading {
+  margin-bottom: 0;
+}
+.theme-posted {
+  margin-right: 2%;
+  text-align: left;
+  width: 96%;
+  margin-top:0;
+  margin-bottom: 15px;
+}
+}
+
+@media(max-width:768px){
+	.DefThmJobList {
+  width: 90%;
+  margin: 0 5%;
+}
+.home-btn {
+  font-size: 30px;
+  line-height: 2.2;
+}
+	.DefThmJobListDiv {
+  margin: 0 10%;
+  width: 100%;
+}
+.job-desc-rgt-sd {
+  margin-left: 0;
+}
+}
+
+.col-md-5.custom-inpt-defthm textarea {
+  background: #f5f5f5 none repeat scroll 0 0;
+  border: 0 none;
+  box-shadow: 0 1px 2px rgba(245, 245, 245, 1);
+  font-family: myriadcondensedweb;
+  font-size: 20px;
+  height: 50px;
+  padding-left: 15px;
+  width: 40%;
+}
+.textAreaAlign{
+	height:170px !important;
+}
+.home-btn:focus {
+  outline: medium none;
+}
+.footer-copyright > a {
+  color: #666;
+  text-decoration: none;
+}

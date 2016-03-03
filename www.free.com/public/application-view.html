@@ -1,0 +1,263 @@
+<style type="text/css">
+.hero-area {
+	display: none;
+}
+#wrap {
+  height: 100%;
+}
+</style>
+
+<div class="main" role="main">
+	<div id="content" class="content full padding-b0">
+		<div class="container">
+			<!-- Welcome Content and Services overview -->
+			<section class="listing-block recent-vehicles">
+
+				<div class="listing-header">
+					<h3 class="app-vw-pg-defthm">Job Application</h3>
+				</div>
+
+				<div class="">
+
+					<div class="columnsContainer">
+
+						<div class="actions-bar" style="margin-bottom: 4%;">
+							<div ng-repeat="data in getApplyFields">
+							<div class="row job-view" style="padding-left: 2.5%;"
+								ng-show="jobApplication.firstName" ng-if="data.masterApplyFields.fieldName == 'Name'">
+								<div class="col-md-3 app-vw-div-defthm">
+									<label class="label-text defthm-labl-appvw" for="name">Name</label> <label
+										class="label-text-colen defthm-lablcol-appvw" for="name">:</label>
+								</div>
+								<div class="col-md-9 defthm-dyn-appvw">
+								
+										<p>{{jobApplication.firstName}}</p>
+									
+								</div>
+							</div>
+							
+							<div class="row job-view" style="padding-left: 2.5%;"
+								ng-show="jobApplication.phoneNo"  ng-if="data.masterApplyFields.fieldName == 'Phone Number'">
+								<div class="col-md-3 app-vw-div-defthm">
+									<label class="label-text defthm-labl-appvw" for="name">Phone Number</label> <label
+										class="label-text-colen defthm-lablcol-appvw" for="name">:</label>
+								</div>
+								<div class="col-md-9 defthm-dyn-appvw">
+									<p>{{jobApplication.phoneNo}}</p>
+								</div>
+							</div>
+
+							<div class="row job-view" style="padding-left: 2.5%;"
+								ng-show="jobApplication.emailId" ng-if="data.masterApplyFields.fieldName == 'Email'">
+								<div class="col-md-3 app-vw-div-defthm">
+									<label class="label-text defthm-labl-appvw" for="name">Email </label> <label
+										class="label-text-colen defthm-lablcol-appvw" for="name">:</label>
+								</div>
+								<div class="col-md-9 defthm-dyn-appvw">
+									<p>{{jobApplication.emailId}}</p>
+								</div>
+							</div>
+
+							
+
+							<div class="row job-view" style="padding-left: 2.5%;"
+								ng-show="jobApplication.experience" ng-if="data.masterApplyFields.fieldName == 'Total Experience (in years)'">
+								<div class="col-md-3 app-vw-div-defthm">
+									<label class="label-text defthm-labl-appvw" for="name">Total Experience</label> <label
+										class="label-text-colen defthm-lablcol-appvw" for="name">:</label>
+								</div>
+								<div class="col-md-9 defthm-dyn-appvw">
+									<p>{{jobApplication.experience}} years</p>
+								</div>
+							</div>
+
+
+							<div class="row job-view" style="padding-left: 2.5%;"
+								ng-show="jobApplication.location" ng-if="data.masterApplyFields.fieldName == 'Current Location'">
+								<div class="col-md-3 app-vw-div-defthm">
+									<label class="label-text defthm-labl-appvw" for="name">Current Location </label>
+									<label class="label-text-colen defthm-lablcol-appvw" for="name">:</label>
+								</div>
+								<div class="col-md-9 defthm-dyn-appvw">
+									
+										<p>{{jobApplication.location}}</p>
+									
+
+								</div>
+							</div>
+							
+							<div class="row job-view" style="padding-left: 2.5%;"
+								ng-show="jobApplication.noticedPeriod" ng-if="data.masterApplyFields.fieldName == 'Notice Period'">
+								<div class="col-md-3 app-vw-div-defthm">
+									<label class="label-text defthm-labl-appvw" for="name">Notice Period</label>
+									<label class="label-text-colen defthm-lablcol-appvw" for="name">:</label>
+								</div>
+								<div class="col-md-9 defthm-dyn-appvw">
+									
+										<p>{{jobApplication.noticedPeriod}}</p>
+									
+
+								</div>
+							</div>
+							
+							<div class="row job-view" style="padding-left: 2.5%;"
+								ng-show="jobApplication.currentCtc" ng-if="data.masterApplyFields.fieldName == 'Current CTC'">
+								<div class="col-md-3 app-vw-div-defthm">
+									<label class="label-text defthm-labl-appvw" for="name">Current CTC</label>
+									<label class="label-text-colen defthm-lablcol-appvw" for="name">:</label>
+								</div>
+								<div class="col-md-9 defthm-dyn-appvw">	
+										<p>{{jobApplication.currentCtc}}</p>
+								</div>
+							</div>
+
+								<div class="row job-view" style="padding-left: 2.5%;"
+									ng-show="jobApplication.expectedCtc"
+									ng-if="data.masterApplyFields.fieldName == 'Expected CTC'">
+									<div class="col-md-3 app-vw-div-defthm">
+										<label class="label-text defthm-labl-appvw" for="name">Expected
+											CTC</label> <label class="label-text-colen defthm-lablcol-appvw"
+											for="name">:</label>
+									</div>
+									<div class="col-md-9 defthm-dyn-appvw">
+										<p>{{jobApplication.expectedCtc}}</p>
+									</div>
+								</div>
+								
+								<div class="row job-view" style="padding-left: 2.5%;"
+									ng-show="jobApplication.reasonForLeaving"
+									ng-if="data.masterApplyFields.fieldName == 'Reason For Leaving'">
+									<div class="col-md-3 app-vw-div-defthm">
+										<label class="label-text defthm-labl-appvw" for="name">Reason For Leaving
+											</label> <label class="label-text-colen defthm-lablcol-appvw"
+											for="name">:</label>
+									</div>
+									<div class="col-md-9 defthm-dyn-appvw">
+										<p>{{jobApplication.reasonForLeaving}}</p>
+									</div>
+								</div>
+								
+								<div class="row job-view" style="padding-left: 2.5%;"
+									ng-show="jobApplication.dateOfBirth"
+									ng-if="data.masterApplyFields.fieldName == 'Date of Birth'">
+									<div class="col-md-3 app-vw-div-defthm">
+										<label class="label-text defthm-labl-appvw" for="name">Date of Birth
+											</label> <label class="label-text-colen defthm-lablcol-appvw"
+											for="name">:</label>
+									</div>
+									<div class="col-md-9 defthm-dyn-appvw">
+										<p>{{jobApplication.dateOfBirth}}</p>
+									</div>
+								</div>
+								
+								<div class="row job-view" style="padding-left: 2.5%;"
+									ng-show="jobApplication.preferredLocation"
+									ng-if="data.masterApplyFields.fieldName == 'Preferred Location'">
+									<div class="col-md-3 app-vw-div-defthm">
+										<label class="label-text defthm-labl-appvw" for="name">Preferred Location
+											</label> <label class="label-text-colen defthm-lablcol-appvw"
+											for="name">:</label>
+									</div>
+									<div class="col-md-9 defthm-dyn-appvw">
+										<p>{{jobApplication.preferredLocation}}</p>
+									</div>
+								</div>
+								
+								<div class="row job-view" style="padding-left: 2.5%;"
+									ng-show="jobApplication.relevantExperience"
+									ng-if="data.masterApplyFields.fieldName == 'Relevant Experience'">
+									<div class="col-md-3 app-vw-div-defthm">
+										<label class="label-text defthm-labl-appvw" for="name">Relevant Experience
+											</label> <label class="label-text-colen defthm-lablcol-appvw"
+											for="name">:</label>
+									</div>
+									<div class="col-md-9 defthm-dyn-appvw">
+										<p>{{jobApplication.relevantExperience}}</p>
+									</div>
+								</div>
+								
+								<div class="row job-view" style="padding-left: 2.5%;"
+									ng-show="jobApplication.linkedInProfile"
+									ng-if="data.masterApplyFields.fieldName == 'LinkedIn Profile'">
+									<div class="col-md-3 app-vw-div-defthm">
+										<label class="label-text defthm-labl-appvw" for="name">LinkedIn Profile
+											</label> <label class="label-text-colen defthm-lablcol-appvw"
+											for="name">:</label>
+									</div>
+									<div class="col-md-9 defthm-dyn-appvw">
+										<p>{{jobApplication.linkedInProfile}}</p>
+									</div>
+								</div>
+								
+								<div class="row job-view" style="padding-left: 2.5%;"
+									ng-show="jobApplication.workProfile"
+									ng-if="data.masterApplyFields.fieldName == 'Work Profile URL'">
+									<div class="col-md-3 app-vw-div-defthm">
+										<label class="label-text defthm-labl-appvw" for="name">Work Profile URL
+											</label> <label class="label-text-colen defthm-lablcol-appvw"
+											for="name">:</label>
+									</div>
+									<div class="col-md-9 defthm-dyn-appvw">
+										<p>{{jobApplication.workProfile}}</p>
+									</div>
+								</div>
+								
+								<div class="row job-view" style="padding-left: 2.5%;"
+									ng-show="jobApplication.highestEducationalQualification"
+									ng-if="data.masterApplyFields.fieldName == 'Highest Educational Qualification'">
+									<div class="col-md-3 app-vw-div-defthm">
+										<label class="label-text defthm-labl-appvw" for="name">Highest Educational Qualification
+											</label> <label class="label-text-colen defthm-lablcol-appvw"
+											for="name">:</label>
+									</div>
+									<div class="col-md-9 defthm-dyn-appvw">
+										<p>{{jobApplication.highestEducationalQualification}}</p>
+									</div>
+								</div>
+								
+								<div class="row job-view" style="padding-left: 2.5%;"
+									ng-show="jobApplication.coverLetter"
+									ng-if="data.masterApplyFields.fieldName == 'Cover Letter'">
+									<div class="col-md-3 app-vw-div-defthm">
+										<label class="label-text defthm-labl-appvw" for="name">Cover Letter
+											</label> <label class="label-text-colen defthm-lablcol-appvw"
+											for="name">:</label>
+									</div>
+									<div class="col-md-9 defthm-dyn-appvw">
+										<p>{{jobApplication.coverLetter}}</p>
+									</div>
+								</div>
+								
+							
+
+							</div>
+
+							<div class="row job-view" style="padding-left: 2.5%;"
+								ng-show="jobApplication.status">
+								<div class="col-md-3 app-vw-div-defthm">
+									<label class="label-text defthm-labl-appvw" for="name">Status</label> <label
+										class="label-text-colen defthm-lablcol-appvw" for="name">:</label>
+								</div>
+								<div class="col-md-9 defthm-dyn-appvw">
+									
+										<p>{{status}}</p>
+									
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
+
+				</div>
+			</section>
+		</div>
+
+	</div>
+</div>
+
+
+
+<!-- End Body Content -->
+

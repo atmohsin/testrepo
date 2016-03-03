@@ -1,0 +1,17 @@
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
+Header always set Access-Control-Max-Age "1000"
+Header always set Access-Control-Allow-Headers "x-requested-with, Content-Type, origin, authorization, accept, client-security-token"
+
+RewriteEngine On
+
+RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9])
+RewriteRule ^$ /SEO/static-page-facebook.php [R,NC,L]
+
+RewriteCond %{HTTP_USER_AGENT} (Twitterbot|Pinterest|Google.*snippet|LinkedInBot)
+RewriteRule ^$ /SEO/static-page.php [R,NC,L]
+
+RewriteCond %{HTTP_USER_AGENT} Googlebot
+RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/?(.*)$
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^(.*)$ /SEO/joblist.php [L]

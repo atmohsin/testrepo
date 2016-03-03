@@ -1,0 +1,543 @@
+<style type="text/css">
+
+.thm1-pwrd{
+	position:relative;
+}
+.thm1-pwrd small {
+  position: static;
+}
+</style>
+<!-- Start Body Content -->
+
+<div class="main" role="main" style="margin-bottom: 4%">
+	<div id="content" class="content full padding-b0">
+		<div class="container">
+			<!-- Welcome Content and Services overview -->
+
+
+			<section class="listing-block recent-vehicles">
+
+				<div class="listing-header  apply-pg-hd-txt">
+
+					<h2 class="job-appl-defthm-hd"> Applying to {{job.jobTitle}}</h2>
+				</div>
+				<div class="listing-header"></div>
+				<div class="">
+					<div class="carousel-wrapper">
+						<div class="row" style="margin-right: 0px; margin-left: 0px;">
+							<form class="course-finder-form"
+								ng-submit="applyJob(form.$valid)" enctype="multipart/form-data"
+								name="form">
+								<div class="actions-bar" style="">
+									<div class="container applyjob-container">
+                                      <div ng-repeat="data in getApplyFields">
+
+											<div class="row custom-row-defthm" ng-if="data.masterApplyFields.fieldName == 'Name'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text" for="name">Name&nbsp;<span
+														style="color: red;">*</span></label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm">
+													<input class="form-control apply-job-formcontrol"
+														ng-model="JobApplication.firstName" name="firstName"
+														required ng-pattern="/^(\D)+$/" />
+												</div>
+												<div class="col-md-5">
+													<span class="error-styl-defthm"
+														ng-show="(form.firstName.$dirty || submitted) && form.firstName.$error.required">
+														First name is required </span> <span class="error-styl-defthm"
+														ng-show="(form.firstName.$dirty || submitted) &&  form.firstName.$error.pattern">
+														Please enter text only. </span>
+												</div>
+											</div>
+
+
+											<div class="row custom-row-defthm" ng-if="data.masterApplyFields.fieldName == 'Email'">
+											<div class="col-md-2 custom-labl-defthm">
+												<label class="label-text apply-job-formcontrol" for="name">Email&nbsp;
+												<span style="color: red;">*</span>
+												</label>
+											</div>
+											<div class="col-md-5 custom-inpt-defthm">
+												<input class="form-control apply-job-formcontrol"
+													type="email" ng-model="JobApplication.emailId"
+													name="emailId" required /></div> <div class="col-md-5"><span
+													class="error-styl-defthm"
+													ng-show="(form.emailId.$dirty || submitted) && form.emailId.$error.required">
+													Email is required </span> <span class="error-styl-defthm"
+													ng-show="(form.emailId.$dirty || submitted) && form.emailId.$error.email">
+													Invalid Email. </span>
+											</div>
+										</div>
+										
+										<div class="row custom-row-defthm" ng-if="data.masterApplyFields.fieldName == 'Phone Number'">
+											<div class="col-md-2 custom-labl-defthm">
+												<label class="label-text apply-job-formcontrol" for="name">Phone Number&nbsp;<span style="color: red;" ng-if="data.isMandatory=='Y'">*</span></label>
+											</div>
+											<div class="col-md-5 custom-inpt-defthm">
+												<input class="form-control apply-job-formcontrol"
+													ng-model="JobApplication.phoneNo" name="phoneNo" maxlength="16"
+													ng-pattern="/^0|[+1-9-][0-9]*$/" ng-required="data.isMandatory=='Y'"/></div> <div class="col-md-5"><span
+													class="error-styl-defthm"
+													ng-show="(form.phoneNo.$dirty || submitted) && form.phoneNo.$error.pattern">
+													Please enter only numbers. </span>
+													<span class="error-styl-defthm"
+												ng-show="(form.phoneNo.$dirty || submitted) && form.phoneNo.$error.required">
+												Phone Number is required </span>
+											</div>
+										</div>
+
+											<div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'Total Experience (in years)'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text apply-job-formcontrol" for="name">Total
+														Experience (in years)&nbsp;<span style="color: red;" ng-if="data.isMandatory=='Y'">*</span></label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm" >
+													<input class="form-control apply-job-formcontrol"
+														ng-model="JobApplication.experience" name="experience"
+														ng-pattern="/^[0-9]{1,7}(\.[0-9]+)?$/" maxlength="4" ng-required="data.isMandatory=='Y'"/>
+												</div>
+												<div class="col-md-5">
+													<span class="error-styl-defthm"
+														ng-show="(form.experience.$dirty || submitted) && form.experience.$error.pattern">
+														Invalid Value. </span>
+														<span class="error-styl-defthm"
+												ng-show="(form.experience.$dirty || submitted) && form.experience.$error.required">
+												Experience is required </span>
+												</div>
+											</div>
+
+											<div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'Current Location'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text apply-job-formcontrol" for="name">Current
+														Location&nbsp;<span style="color: red;"
+														ng-if="data.isMandatory=='Y'">*</span>
+													</label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm">
+													<input class="form-control apply-job-formcontrol"
+														type="text" ng-model="JobApplication.location"
+														name="location" ng-required="data.isMandatory=='Y'" />
+												</div>
+												<div class="col-md-5">
+
+													<span class="error-styl-defthm"
+														ng-show="(form.location.$dirty || submitted) && form.location.$error.required">
+														Location is required </span>
+												</div>
+											</div>
+											
+											<div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'Notice Period'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text apply-job-formcontrol" for="name">Notice Period&nbsp;<span style="color: red;"
+														 
+														ng-if="data.isMandatory=='Y'">*</span>
+													</label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm">
+													<input class="form-control apply-job-formcontrol"
+														type="text" ng-model="JobApplication.noticedPeriod"
+														name="noticedPeriod" ng-required="data.isMandatory=='Y'" />
+												</div>
+												<div class="col-md-5">
+
+													<span class="error-styl-defthm"
+														ng-show="(form.noticedPeriod.$dirty || submitted) && form.noticedPeriod.$error.required">
+														Notice Period is required </span>
+												</div>
+											</div>
+											
+											<div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'Current CTC'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text apply-job-formcontrol" for="name">Current CTC&nbsp;<span style="color: red;"
+														 
+														ng-if="data.isMandatory=='Y'">*</span>
+													</label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm">
+													<input class="form-control apply-job-formcontrol"
+														type="text" ng-model="JobApplication.currentCtc"
+														name="currentCtc" ng-required="data.isMandatory=='Y'" />
+												</div>
+												<div class="col-md-5">
+
+													<span class="error-styl-defthm"
+														ng-show="(form.currentCtc.$dirty || submitted) && form.currentCtc.$error.required">
+														Current CTC is required </span>
+												</div>
+											</div>
+											
+											<div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'Expected CTC'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text apply-job-formcontrol" for="name">Expected CTC&nbsp;<span style="color: red;"
+														 
+														ng-if="data.isMandatory=='Y'">*</span>
+													</label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm">
+													<input class="form-control apply-job-formcontrol"
+														type="text" ng-model="JobApplication.expectedCtc"
+														name="expectedCtc" ng-required="data.isMandatory=='Y'" />
+												</div>
+												<div class="col-md-5">
+
+													<span class="error-styl-defthm"
+														ng-show="(form.expectedCtc.$dirty || submitted) && form.expectedCtc.$error.required">
+														Expected CTC is required </span>
+												</div>
+											</div>
+											
+											<div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'Reason for Leaving'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text apply-job-formcontrol" for="name">Reason for Leaving&nbsp;<span style="color: red;"
+														 
+														ng-if="data.isMandatory=='Y'">*</span>
+													</label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm">
+													<input class="form-control apply-job-formcontrol"
+														type="text" ng-model="JobApplication.reasonForLeaving"
+														name="reasonForLeaving" ng-required="data.isMandatory=='Y'" />
+												</div>
+												<div class="col-md-5">
+
+													<span class="error-styl-defthm"
+														ng-show="(form.reasonForLeaving.$dirty || submitted) && form.reasonForLeaving.$error.required">
+														Reason for Leaving is required </span>
+												</div>
+											</div>
+
+                                            <div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'Date of Birth'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text apply-job-formcontrol" for="name">Date of Birth&nbsp;(dd/mm/yyyy) <span style="color: red;"
+														 
+														ng-if="data.isMandatory=='Y'">*</span>
+													</label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm">
+													<input class="form-control apply-job-formcontrol"
+													ng-pattern="/^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/"
+														type="text" ng-model="JobApplication.dateOfBirth"
+														name="dateOfBirth" ng-required="data.isMandatory=='Y'" />
+												</div>
+												<div class="col-md-5">
+
+													<span class="error-styl-defthm"
+														ng-show="(form.dateOfBirth.$dirty || submitted) && form.dateOfBirth.$error.required">
+														 Date of Birth is required </span>
+														 <span style='color: red'
+												ng-show="(form.dateOfBirth.$dirty || submitted) && form.dateOfBirth.$error.pattern">
+												Please enter valid Date of Birth </span>
+												</div>
+											</div>
+                                            
+                                            <div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'Preferred Location'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text apply-job-formcontrol" for="name">Preferred Location&nbsp;<span style="color: red;"
+														 
+														ng-if="data.isMandatory=='Y'">*</span>
+													</label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm">
+													<input class="form-control apply-job-formcontrol"
+														type="text" ng-model="JobApplication.preferredLocation"
+														name="preferredLocation" ng-required="data.isMandatory=='Y'" />
+												</div>
+												<div class="col-md-5">
+
+													<span class="error-styl-defthm"
+														ng-show="(form.preferredLocation.$dirty || submitted) && form.preferredLocation.$error.required">
+														 Preferred Location is required </span>
+												</div>
+											</div>
+                                            
+                                            <div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'Relevant Experience'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text apply-job-formcontrol" for="name">Relevant Experience&nbsp;<span style="color: red;"
+														 
+														ng-if="data.isMandatory=='Y'">*</span>
+													</label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm">
+													<input class="form-control apply-job-formcontrol"
+														type="text" ng-model="JobApplication.relevantExperience"
+														name="relevantExperience" ng-required="data.isMandatory=='Y'" />
+												</div>
+												<div class="col-md-5">
+
+													<span class="error-styl-defthm"
+														ng-show="(form.relevantExperience.$dirty || submitted) && form.relevantExperience.$error.required">
+														Relevant Experience is required </span>
+												</div>
+											</div>
+                                            
+                                            <div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'LinkedIn Profile'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text apply-job-formcontrol" for="name">LinkedIn Profile&nbsp;<span style="color: red;"
+														 
+														ng-if="data.isMandatory=='Y'">*</span>
+													</label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm">
+													<input class="form-control apply-job-formcontrol" ng-pattern="/linkedin/"
+														type="text" ng-model="JobApplication.linkedInProfile"
+														name="linkedInProfile" ng-required="data.isMandatory=='Y'" />
+												</div>
+												<div class="col-md-5">
+
+													<span class="error-styl-defthm"
+														ng-show="(form.linkedInProfile.$dirty || submitted) && form.linkedInProfile.$error.required">
+														LinkedIn Profile is required </span>
+														<span style='color: red'
+												ng-show="(form.linkedInProfile.$dirty || submitted) && form.linkedInProfile.$error.pattern">
+												Please enter valid Linkedin Profile URL. </span>
+												</div>
+											</div>
+
+											<div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'Work Profile URL'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text apply-job-formcontrol" for="name">Work Profile URL&nbsp;<span style="color: red;"
+														 
+														ng-if="data.isMandatory=='Y'">*</span>
+													</label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm">
+													<input class="form-control apply-job-formcontrol"
+														ng-pattern="/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/"
+														type="text" ng-model="JobApplication.workProfile"
+														name="workProfile" ng-required="data.isMandatory=='Y'" />
+												</div>
+												<div class="col-md-5">
+
+													<span class="error-styl-defthm"
+														ng-show="(form.workProfile.$dirty || submitted) && form.workProfile.$error.required">
+														Work Profile URL is required </span>
+														<span style='color: red'
+												ng-show="(form.workProfile.$dirty || submitted) && form.workProfile.$error.pattern">
+												Please enter valid URL. </span>
+												</div>
+											</div>
+
+											<div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'Highest Educational Qualification'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text apply-job-formcontrol" for="name">Highest Educational Qualification&nbsp;<span style="color: red;"
+														 
+														ng-if="data.isMandatory=='Y'">*</span>
+													</label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm">
+													<input class="form-control apply-job-formcontrol"
+														type="text" ng-model="JobApplication.highestEducationalQualification"
+														name="highestEducationalQualification" ng-required="data.isMandatory=='Y'" />
+												</div>
+												<div class="col-md-5">
+
+													<span class="error-styl-defthm"
+														ng-show="(form.highestEducationalQualification.$dirty || submitted) && form.highestEducationalQualification.$error.required">
+														Highest Educational Qualification is required </span>
+												</div>
+											</div>
+                                            
+                                            <div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'Cover Letter'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text apply-job-formcontrol" for="name">Cover Letter&nbsp;<span style="color: red;"
+														 
+														ng-if="data.isMandatory=='Y'">*</span>
+													</label>
+												</div>
+												<div class="col-md-5 custom-inpt-defthm">
+													<textarea class="test-control apply-job-formcontrol textAreaAlign"
+														type="text" ng-model="JobApplication.coverLetter"
+														name="coverLetter" ng-required="data.isMandatory=='Y'" ></textarea>
+												</div>
+												<div class="col-md-5">
+
+													<span class="error-styl-defthm"
+														ng-show="(form.coverLetter.$dirty || submitted) && form.coverLetter.$error.required">
+														 Cover Letter is required </span>
+												</div>
+											</div>
+                                            
+                                            
+											<div class="row custom-row-defthm"
+												ng-if="data.masterApplyFields.fieldName == 'Upload Resume'">
+												<div class="col-md-2 custom-labl-defthm">
+													<label class="label-text" for="name">Upload Resume&nbsp; 
+														<span style="color: red;" ng-if="data.isMandatory=='Y'">*</span>
+													</label>
+												</div>
+
+												<div class="col-md-5 custom-inpt-defthm">
+													<input type="text" size="50" ng-model="fileName"
+														name="filename" class="form-control apply-job-formcontrol"
+														disabled style="margin-bottom: 15px ! important;"
+														ng-required="data.isMandatory=='Y'">
+												</div>
+												<div class="col-md-4 choose-file-defthm">
+													<label for="fileUpload" class="btn btn-theme btn-file"
+														style="border-radius: 0px; margin-bottom: 2%" id="title">Choose
+														file</label> <input type="file" name="fileUpload" value="test"
+														style="display: none" ng-model="JobApplication.resume"
+														id="fileUpload"
+														onchange="angular.element(this).scope().setFileName(this)"
+														ng-required="data.isMandatory=='Y'" />
+												</div>
+												<div class="col-md-5">
+
+													<span class="error-styl-defthm"
+														ng-show="(form.fileUpload.$dirty || submitted) && form.fileUpload.$error.required">
+														Resume is required </span>
+												</div>
+											</div>
+
+										</div>
+									<!-- if apply configuration list is null -->
+										
+										<div class="row custom-row-defthm" ng-if="getApplyFields.length==0">
+											<div class="col-md-2 custom-labl-defthm">
+												<label class="label-text" for="name">Name&nbsp;<span
+													style="color: red;">*</span></label>
+											</div>	
+											<div class="col-md-5 custom-inpt-defthm">
+												<input class="form-control apply-job-formcontrol"
+													ng-model="JobApplication.firstName" name="firstName"
+													required ng-pattern="/^(\D)+$/" /> </div>
+													<div class="col-md-5"><span class="error-styl-defthm"
+													ng-show="(form.firstName.$dirty || submitted) && form.firstName.$error.required">
+													First name is required </span> <span class="error-styl-defthm"
+													ng-show="(form.firstName.$dirty || submitted) &&  form.firstName.$error.pattern">
+													Please enter text only. </span>
+										</div>					
+										</div>
+																	
+										
+										<div class="row custom-row-defthm" ng-if="getApplyFields.length==0">
+											<div class="col-md-2 custom-labl-defthm">
+												<label class="label-text apply-job-formcontrol" for="name">Email
+													&nbsp;<span style="color: red;">*</span>
+												</label>
+											</div>
+											<div class="col-md-5 custom-inpt-defthm">
+												<input class="form-control apply-job-formcontrol"
+													type="email" ng-model="JobApplication.emailId"
+													name="emailId" required /></div> <div class="col-md-5"><span
+													class="error-styl-defthm"
+													ng-show="(form.emailId.$dirty || submitted) && form.emailId.$error.required">
+													Email is required </span> <span class="error-styl-defthm"
+													ng-show="(form.emailId.$dirty || submitted) && form.emailId.$error.email">
+													Invalid Email. </span>
+											</div>
+										</div>
+										
+										<div class="row custom-row-defthm" ng-if="getApplyFields.length==0">
+											<div class="col-md-2 custom-labl-defthm">
+												<label class="label-text apply-job-formcontrol" for="name">Phone&nbsp;</label>
+											</div>
+											<div class="col-md-5 custom-inpt-defthm">
+												<input class="form-control apply-job-formcontrol"
+													ng-model="JobApplication.phoneNo" name="phoneNo"
+													ng-pattern="/^0|[1-9][0-9]*$/" /></div> <div class="col-md-5"><span
+													class="error-styl-defthm"
+													ng-show="(form.phoneNo.$dirty || submitted) && form.phoneNo.$error.pattern">
+													Please enter only numbers. </span>
+											</div>
+										</div>
+										
+										<div class="row custom-row-defthm" ng-if="getApplyFields.length==0">
+											<div class="col-md-2 custom-labl-defthm">
+												<label class="label-text apply-job-formcontrol" for="name">Total Experience (in years)&nbsp;</label>
+											</div>
+											<div class="col-md-5 custom-inpt-defthm">
+												<input class="form-control apply-job-formcontrol"
+													ng-model="JobApplication.experience" name="experience"
+													ng-pattern="/^[0-9]{1,7}(\.[0-9]+)?$/" maxlength="4" /></div> <div class="col-md-5">
+												<span class="error-styl-defthm"
+													ng-show="(form.experience.$dirty || submitted) && form.experience.$error.pattern">
+													Invalid Value. </span>
+											</div>
+										</div>
+
+										<div class="row custom-row-defthm" ng-if="getApplyFields.length==0">
+											<div class="col-md-2 custom-labl-defthm">
+												<label class="label-text apply-job-formcontrol" for="name">Current
+													Location&nbsp;</label>
+											</div>
+											<div class="col-md-5 custom-inpt-defthm">
+												<input class="form-control apply-job-formcontrol"
+													type="text" ng-model="JobApplication.location"
+													name="location" />
+											</div>
+										</div>
+
+										<div class="row custom-row-defthm" ng-if="getApplyFields.length==0">
+											<div class="col-md-2 custom-labl-defthm">
+												<label class="label-text" for="name">Upload Resume&nbsp;</label>
+											</div>
+
+											<div class="col-md-5 custom-inpt-defthm">
+												<input type="text" size="50" ng-model="fileName"
+													name="filename" class="form-control apply-job-formcontrol"
+													disabled
+													style=" margin-bottom: 15px ! important;">
+											</div>
+											<div class="col-md-4 choose-file-defthm">
+												<label for="fileUpload" class="btn btn-theme btn-file"
+													style="border-radius: 0px; margin-bottom: 2%" id="title">Choose
+													file</label> <input type="file" name="fileUpload" value="test"
+													style="display: none" ng-model="JobApplication.resume"
+													id="fileUpload"
+													onchange="angular.element(this).scope().setFileName(this)" />
+													<span style='color: red'
+												ng-show="(form.filename.$dirty || submitted) && form.filename.$error.required">
+												Resume is required </span>
+											</div>
+
+										</div>
+										
+										<!--  -->
+  
+										<div style="margin-top: 15px;" class="row recaptch-custom-defthm">
+											<div class="col-md-2"></div>
+											<div class="col-md-5">
+												<div id="recaptcha" vc-recaptcha theme="'light'" key="model.key"
+													on-create="setWidgetId(widgetId)"
+													on-success="setResponse(response)"></div>
+												<a ng-show="response != null"  class="getcap-err"  ng-click='reloadCAPTCHA()'>Get another CAPTCHA</a>	
+												<span class="recap-reqerr"  ng-show="recapchaerror">
+													reCAPTCHA is required </span>
+											</div>
+
+										</div>
+
+										<div class="row">
+											<div class="col-md-2"></div>
+											<div class="col-md-5 custom-submit-defthm">
+												<div id="navcontainer" style="margin-top: 2%;">
+													<input type="submit" value="Submit" id="submit"
+														class="btn btn-primary btn-lg comonBtn" name="submit">
+												</div>
+											</div>
+										</div>
+									</div>
+									</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>

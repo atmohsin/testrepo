@@ -1,0 +1,27 @@
+<!-- <div class="homepg-error">Page Not Found</div>
+ -->
+                 <div class="row" style="margin-right: 0px;margin-left: 0px;">
+                    
+                    <div class="listing-header-home">
+                            	
+                                <h3>OPEN POSITIONS</h3>
+                    </div>
+                	
+               
+                    <div  ng-controller="searchJobListCtrlforJoblisting" class="DefThmJobList">
+                     <div class="DefThmJobListDiv" ng-repeat="data in job| limitTo: limitStep">
+                                     <h2 class="title custom-h2"><a style="cursor: pointer;" ng-click='viewJobPage(data.jobUrl,pagination.page)'
+										id="titleStyle">{{data.jobTitle}}
+									</a></h2>
+                                    <i class="fa fa-map-marker location-icon" ng-hide= "{{!data.locationDisplayForManageJobs}}"></i> {{data.locationDisplayForManageJobs}}
+                    </div>
+                    <div class="vw-morbtn-maindiv">
+                    <a ng-show="job.length >6 && job.length > limitStep" class="vw-morebtn" ng-click='moreJobs()' href="">View More
+									</a>
+					</div>
+                    <div class="noJobsErr" ng-show="job.length < 1">
+							<h2 >Sorry, no jobs found!</h2>
+						</div>
+                    </div>
+               	</div>
+                

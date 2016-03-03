@@ -1,0 +1,158 @@
+<style type="text/css">
+.hero-area {
+	display: none;
+}
+
+.dialog-loading-wrapper {
+
+display: none;
+
+}
+.thm1-pwrd{
+	position:relative;
+}
+.thm1-pwrd small {
+  position: static;
+}
+
+
+</style>
+		<h1 class="defthm-mainhd">JOB DETAILS</h1>
+
+<div class="main" role="main">
+    	<div id="content" class="content full padding-b0">
+            <div class="container">
+            	<!-- Welcome Content and Services overview -->
+                <section class="listing-block recent-vehicles customJobVwSection" >
+                    
+                    <div class="listing-header jobVwHeading">
+                            	
+                                <h2 class="defThmSubHeading" >{{job.jobTitle}} at {{job.companyName}}
+                               
+				
+					
+                                </h2>
+                                <h2 class="theme-posted  defThmSubHeading">Posted {{diff}}</h2>
+                               
+                                
+                    </div>
+                   
+                    <div class="">
+                       
+                           <div class="columnsContainer">
+ 
+      <div class="leftColumn">
+        <div class="actions-bar" style="margin-bottom: 4%;">
+
+
+					
+                                    
+                                	<div class="row job-view job-vw-def-thm-row" style="padding-left: 2.5%;" ng-show="job.longDescription">
+                                      <div class="col-md-3 job-vw-def-thm-div1">
+          <label class="label-text" for="name">Job Description</label>
+          <label class="label-text-colen" for="name">:</label>
+        </div>
+        <div class="col-md-9 job-desc-rgt-sd">
+         <div class="joblisting job-description"> <p ng-bind-html="job.longDescription"></p></div>
+
+        </div>
+        </div>
+                           <div class="row job-view job-vw-def-thm-row" style="padding-left: 2.5%;" ng-show="job.location">
+                                    <div class="col-md-3 job-vw-def-thm-div1">
+          <label class="label-text" for="name">Location  </label>
+          <label class="label-text-colen" for="name">:</label>
+        </div>
+        <div class="col-md-9">
+         <p  class="job-view-location">{{job.locationDisplayForManageJobs}}</p>
+        </div>
+                                </div>   
+                          <div class="row job-view job-vw-def-thm-row" style="padding-left: 2.5%;"
+									ng-show="displayExperience">
+									<div class="col-md-3 job-vw-def-thm-div1">
+										<label class="label-text" for="name">Years Of Exp.</label> <label
+											class="label-text-colen" for="name">:</label>
+									</div>
+
+									<div class="col-md-9">
+										<div class="joblisting job-description">
+											<p>{{displayExperience}}</p>
+										</div>
+									</div>
+								</div>
+								<div class="row job-view job-vw-def-thm-row" style="padding-left: 2.5%;"
+									 ng-show="job.role">
+									<div class="col-md-3 job-vw-def-thm-div1">
+										<label class="label-text" for="name">Role</label> <label
+											class="label-text-colen" for="name">:</label>
+									</div>
+
+									<div class="col-md-9 job-desc-rgt-sd">
+										<div class="joblisting job-description">
+											<p ng-bind-html="job.role"></p>
+										</div>
+									</div>
+								</div>
+								
+                                
+                                 <div class="row job-view job-vw-def-thm-row"  style="padding-left: 2.5%;" ng-show="job.skillSet">
+                                    <div class="col-md-3 job-vw-def-thm-div1">
+          <label class="label-text" for="name">Skills Required </label>
+          <label class="label-text-colen" for="name">:</label>
+        </div>
+        <div class="col-md-9">
+         <div class="joblisting job-description">{{job.skillSet}}
+         </div>
+ 
+        </div>
+                                </div> 
+                                
+                                <div class="row job-view job-vw-def-thm-row"  style="padding-left: 2.5%;">
+                                    <div class="col-md-3 job-vw-def-thm-div1">
+          <label class="label-text">Posted On </label>
+          <label class="label-text-colen">:</label>
+        </div>
+        <div class="col-md-9">
+         <div class="joblisting job-description">{{job.createdDate |
+													date: 'dd-MMM-yyyy'}}
+         </div>
+ 
+        </div>
+                                </div>  
+                               
+                             
+                                
+                                 <div class="row job-view job-apply-btn">
+                                <div id="navcontainer" style="text-align: center;">
+                                      <a ng-click='applyJobPage(job.id, job.jobUrl)' class="btn btn-primary btn-lg comonBtn" name="submit">
+						Apply </a>
+                                 
+                                 </div>
+                                 </div>
+                                 
+                               <div class="apply-with-indeed" style="text-align: center;" ng-show="isSourceIndeed == 'Yes'">
+									<span class="indeed-apply-widget"
+										data-indeed-apply-apiToken="a77d6171e505d9a9604f37005f7fa5bf8bdec557ba03de439e21b90b1fe8f4a1"
+										data-indeed-apply-jobId={{job.id}}
+										data-indeed-apply-jobLocation={{job.location}}
+										data-indeed-apply-jobCompanyName={{job.companyName}}
+										data-indeed-apply-jobTitle={{job.jobTitle}}
+										data-indeed-apply-phone=optional
+										data-indeed-apply-postUrl="http://{{job.careerSiteUrl}}/SEO/process-indeed-application.php?source={{externalSource}}&referrer={{referrerEmailId}}"
+										data-indeed-apply-continueUrl="http://{{job.careerSiteUrl}}/#!/thankyou"></span> 
+
+								</div>    
+						
+                                </div>
+      </div>
+      </div>
+      </div>
+      </section>
+      </div>
+      </div>
+      </div>
+      
+ 
+     
+    
+    
+   

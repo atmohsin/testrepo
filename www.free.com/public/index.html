@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <!-- Basic Page Needs
+  ================================================== --> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title ng-bind="title"></title> 
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="" /> 
+  <meta name="author" content="" /> 
+  <!-- Mobile Specific Metas
+  ================================================== --> 
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" /> 
+  <meta name="format-detection" content="telephone=no" /> 
+  <!-- CSS
+  ================================================== --> 
+  <!--<link id="theme-style" rel="stylesheet" href="css/custom.css?v=20160226" />
+    <link id="theme-style" rel="stylesheet" href="css/ngActivityIndicator.min.css" />
+     <link rel="stylesheet" href="css/font-awesome.css" /> -->
+     
+     <link rel="stylesheet" href="css/zwayam.min.css" />
+  
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]--> 
+  
+  <!-- CUSTOM STYLESHEET FOR STYLING --> 
+  <!-- Color Style --> 
+  
+ <!--  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-550885b5594230c4" async></script>  -->
+  <!-- SCRIPTS
+  ================================================== --> 
+  <script src="js/modernizr.js"></script> 
+  <!-- Modernizr --> 
+  	
+	<!-- Google analytics code - start -->
+	<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-63572680-1', 'auto');
+		  ga('send', 'pageview');
+
+	</script>
+	<!-- Google analytics code - end -->
+  
+ </head> 
+ 
+  
+  
+<!--[if lt IE 7]>
+	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]--> 
+   <body class="home enable-preloader" style="padding-top: 0px;margin: 0;" ng-controller="MainCtrlEditor"> 
+   <div class="custdocument">
+ <div ng-activity-indicator="SpinnerDark" class="dialog-loading-wrapper"></div>
+   <!-- Start Site Header --> 
+   
+	
+	<div class="header" >
+		<div class="headerSubDiv">
+     				<a  ng-show="configurationExternalSystem.companyLogoName" class="custom-Defthm-logo" href="http://{{configurationExternalSystem.companyWebsite}}" target="_blank">
+     				<img ng-src="{{imageSrcCompanyLogo}}" /></a>
+     				<div ng-hide="configurationExternalSystem.companyLogoName" class="custom-Defthm-logo"><span >{{configurationExternalSystem.companyName}}</span></div>
+     				
+				<a class="home-btn" href="."> <i class="fa fa-home"></i></a> 
+		</div>
+		</div>
+    
+     <div id="wrap"> 
+   <div ng-view="" id="ng-view" autoscroll="true"></div> 
+   </div>
+   <!-- End Body Content --> 
+   <!-- Start site footer --> 
+    <div class="footer-copyright">Powered by <a target="_blank" href="http://zwayam.com">Zwayam</a></div>
+    <!-- Start site footer --> 
+    
+    <script src="js/zwayam.min.js"></script>
+			
+		<!-- 
+  <script src="js/jquery-2.0.0.min.js"></script>
+  <script src="js/bootstrap.js"></script>  
+  <script src="js/init.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.min.js"></script> 
+  
+  <script src="js/app/config.js"></script> 
+  <script src="js/simplePagination.js"></script> 
+  <script src="js/angular-sanitize.min.js"></script> 
+  <script src="js/angular-recaptcha.js"></script> 
+  <script type="text/javascript" src="js/jquery.sticky.js"></script>
+  <script src="js/ngActivityIndicator.min.js"></script>
+  <script src="js/jpreloader.min.js"></script> 
+  <script src="js/script.js"></script>
+  --> 
+  
+  
+  <!-- Jquery Library Call --> 
+  
+  <!-- PrettyPhoto Plugin --> 
+  <script src="js/ui-plugins.js"></script> 
+  <!-- UI Plugins --> 
+  <script src="js/helper-plugins.js"></script> 
+  <!-- Helper Plugins --> 
+ 
+  <!-- Owl Carousel --> 
+  <script src="plugin/password-checker.js"></script> 
+  <!-- Password Checker --> 
+  
+  <!-- UI --> 
+   
+  <!-- All Scripts --> 
+
+  <!-- FlexSlider --> 
+ <!--  <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>  -->
+  
+ 
+    <!-- sub domains will take theme app from production url as it is not able to access relative url  -->
+  
+  <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&amp;render=explicit" async defer></script>
+  
+
+  
+  
+<script type="text/javascript">
+
+var websiteURL = window.location.href;
+
+function includeJS(incFile)
+{
+   document.write('<script type="text/javascript" src="'+ incFile+ '"><\/script>');
+}
+
+if(websiteURL.indexOf("localhost") >= 0){
+	//Local URls
+	document.write('<script src="http://localhost/zwayam/homenew/app/theme-app.js"><\/script><script src="http://localhost/zwayam/homenew/js/angular-file-upload-shim.min.js"><\/script><script src="http://localhost/zwayam/homenew/js/angular-file-upload.min.js"><\/script><script src="http://localhost/zwayam/homenew/js/ng-contenteditable.js"><\/script><script src="http://localhost/zwayam/homenew/js/directives.js"><\/script><script src="http://localhost/zwayam/homenew/js/maineditable.js" ><\/script><script src="http://localhost/zwayam/homenew/js/angular-growl.js"><\/script><script src="http://localhost/zwayam/homenew/js/angular-local-storage.min.js"><\/script><script src="http://localhost/zwayam/homenew/js/jquery.toolbar.js"><\/script><script src="http://localhost/zwayam/homenew/js/angular-animate-1.2.0.min.js"><\/script><script src="http://localhost/zwayam/homenew/js/toaster.js"><\/script><script src="http://localhost/zwayam/homenew/js/recaptcha.js?onload=vcRecaptchaApiLoaded&amp;render=explicit" async defer><\/script><\/script><script src="http://localhost/zwayam/homenew/js/angular-social-links.js"><\/script>');
+	
+	document.write('<link rel="stylesheet" type="text/css" href="http://localhost/zwayam/homenew/css/toaster.min.css" /><link rel="stylesheet"href="http://localhost/zwayam/homenew/css/googlefonts.css" />');
+	
+	includeJS("http://localhost/zwayam/homenew/js/swfobject/swfobject.js");
+	/* var superCookieSetup = {cookieName:"mscookie", crossDomain:false, swfURL:"http://localhost/zwayam/homenew/swf/supercookie.swf", expressInstaller:"http://localhost/zwayam/homenew/js/swfobject/expressInstall.swf"}; */
+	includeJS('http://localhost/zwayam/homenew/js/flash_detect_min.js');
+	/* includeJS('http://localhost/zwayam/homenew/js/superCookie.js'); */
+	
+	
+} else if (websiteURL.indexOf("staging") >= 0){
+	
+	//Stagings URls
+	document.write('<script src="http://staging.zwayam.com/app/theme-app.js"><\/script><script src="http://staging.zwayam.com/js/angular-file-upload-shim.min.js"><\/script><script src="http://staging.zwayam.com/js/angular-file-upload.min.js"><\/script><script src="http://staging.zwayam.com/js/ng-contenteditable.js"><\/script><script src="http://staging.zwayam.com/js/directives.js"><\/script><script src="http://staging.zwayam.com/js/maineditable.js" ><\/script><script src="http://staging.zwayam.com/js/angular-growl.js"><\/script><script src="http://staging.zwayam.com/js/angular-local-storage.min.js"><\/script><script src="http://staging.zwayam.com/js/jquery.toolbar.js"><\/script><script src="http://staging.zwayam.com/js/angular-animate-1.2.0.min.js"><\/script><script src="http://staging.zwayam.com/js/toaster.js"><\/script><script src="http://staging.zwayam.com/js/recaptcha.js?onload=vcRecaptchaApiLoaded&amp;render=explicit" async defer><\/script><script src="http://staging.zwayam.com/js/angular-social-links.js"><\/script>');
+	
+	document.write('<link rel="stylesheet" type="text/css" href="http://staging.zwayam.com/css/toaster.min.css" /><link rel="stylesheet"href="http://staging.zwayam.com/css/googlefonts.css" />');
+	
+	includeJS("http://staging.zwayam.com/js/swfobject/swfobject.js");
+	/* var superCookieSetup = {cookieName:"mscookie", crossDomain:true, swfURL:"http://staging.zwayam.com/swf/supercookie.swf", expressInstaller:"http://staging.zwayam.com/js/swfobject/expressInstall.swf"}; */
+	includeJS('http://staging.zwayam.com/js/flash_detect_min.js');
+	/* includeJS('http://staging.zwayam.com/js/superCookie.js'); */
+	
+	
+} else {
+
+	//Production URls
+	document.write('<script src="http://zwayam.com/app/theme-app.js"><\/script><script src="http://zwayam.com/js/angular-file-upload-shim.min.js"><\/script><script src="http://zwayam.com/js/angular-file-upload.min.js"><\/script><script src="http://zwayam.com/js/ng-contenteditable.js"><\/script><script src="http://zwayam.com/js/directives.js"><\/script><script src="http://zwayam.com/js/maineditable.js" ><\/script><script src="http://zwayam.com/js/angular-growl.js"><\/script><script src="http://zwayam.com/js/angular-local-storage.min.js"><\/script><script src="http://zwayam.com/js/jquery.toolbar.js"><\/script><script src="http://zwayam.com/js/angular-animate-1.2.0.min.js"><\/script><script src="http://zwayam.com/js/toaster.js"><\/script><script src="http://zwayam.com/js/recaptcha.js?onload=vcRecaptchaApiLoaded&amp;render=explicit" async defer><\/script><script src="http://zwayam.com/js/angular-social-links.js"><\/script>');
+	
+	document.write('<link rel="stylesheet" type="text/css" href="http://zwayam.com/css/toaster.min.css" /><link rel="stylesheet"href="http://zwayam.com/css/googlefonts.css" />');
+	
+	includeJS("http://zwayam.com/js/swfobject/swfobject.js");
+	/* var superCookieSetup = {cookieName:"mscookie", crossDomain:true, swfURL:"http://zwayam.com/swf/supercookie.swf", expressInstaller:"http://zwayam.com/js/swfobject/expressInstall.swf"}; */
+	includeJS('http://zwayam.com/js/flash_detect_min.js');
+	/* includeJS('http://zwayam.com/js/superCookie.js'); */
+	
+}
+
+</script>
+
+<div id="msCookieDiv"></div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19824700-1', 'ghinda.net');
+  ga('send', 'pageview');
+  
+  function showhtml(){
+      alert("HTML: " + $("#test").html());
+  }
+  </script> 
+  
+  <script>
+		$(window).load(function() {
+			$("#header").sticky({
+				topSpacing : 0
+			});
+		});
+	</script>
+  <script src="js/editor/directives/editor.js"></script> 
+ <!--  <script src="https://code.angularjs.org/1.2.0/angular-animate.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.9/toaster.min.js"></script>   -->
+  <script src="js/ngDialog.js"></script>
+  
+<script type="text/javascript">
+
+
+<!-- Import JS Function BEGIN -->
+
+function includeJS(otherAttributes,incFile)
+{
+	document.write('<script type="text/javascript" src="'+ incFile+ '" "'+otherAttributes+'"><\/script>');
+   
+}
+
+<!-- Import JS Function END -->
+
+<!-- Import CSS Function BEGIN -->
+
+function includeCSS(otherAttributes,incFile){
+	
+	document.write('<link rel="stylesheet" type="text/css" "'+otherAttributes+'" href="'+ incFile+ '"  />');
+	
+}
+
+
+
+<!-- Import CSS Function END -->
+
+
+includeJS('',baseUrl + "app/theme-app.js?v=20160226");
+includeJS('',baseUrl + "js/angular-file-upload-shim.min.js");
+includeJS('',baseUrl + "js/angular-file-upload.min.js");
+includeJS('',baseUrl + "js/ng-contenteditable.js");
+includeJS('',baseUrl + "js/directives.js");
+includeJS('',baseUrl + "js/angular-growl.js");
+includeJS('',baseUrl + "js/angular-local-storage.min.js");
+includeJS('',baseUrl + "js/jquery.toolbar.js");
+includeJS('',baseUrl + "js/angular-animate-1.2.0.min.js");
+includeJS('',baseUrl + "js/toaster.js");
+includeJS('',baseUrl + "js/angular-social-links.js");
+includeJS('',baseUrl + "js/angular-social-links.js");
+includeJS('',baseUrl + "js/jquery.toolbar.js");
+includeCSS('',baseUrl + "css/font-styles.css");
+includeCSS('',baseUrl + "css/toaster.min.css");
+includeCSS('',baseUrl + "css/googlefonts.css");
+	
+
+
+var websiteURL = window.location.href;
+
+</script>
+  
+  <script>
+			(function(d, s, id) {
+				var js, iajs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {
+					return;
+				}
+				js = d.createElement(s);
+				js.id = id;
+				js.async = true;
+				js.src = "https://apply.indeed.com/indeedapply/static/scripts/app/bootstrap.js";
+				iajs.parentNode.insertBefore(js, iajs);
+			}(document, 'script', 'indeed-apply-js'));
+		</script>
+  
+    </div>
+ </body>
+</html>
